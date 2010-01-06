@@ -18,26 +18,24 @@
    * along with XenList.  If not, see <http://www.gnu.org/licenses/>.
    */
 
-   //Reads and decodes the file custom.json, located in the installation root.
+   //Simple avatar lib. It searches for an image with the name provided.
+   //Fallbacks to use identicon.
 
-   include_once('lib/errors.php');
-
-   function parse_custom_json($file = 'custom.json') {
-      if(file_exists($file)) {
-         $f = fopen($file,'r');
-         $rawdata = "";
-         while(!feof($f))
-         $rawdata = $rawdata . fgets($f, 4096);
-         fclose($f);
-         $customdata = json_decode($rawdata, true);
-         if($customdata == null)
-         error("Couldn't understand custom.json. maybe the file is malformed?");
-         return $customdata;
+   function avatar_url($name, $size='64')
+   {
+      //size is only used in the fallback
+      $extensions = array('png', 'gif', 'bmp', 'jpg');
+      foreach($extensions as $ext) {
+         if(file_exists("avatar/$name.$ext"))
+         return htmlentities("avatar/$name.$ext");
       }
-      else {
-         error("Couldn't find custom.json");
-         return null;
-      }
+      $hash = hash('md4', $name); //We use md4 for speed
+      return htmlentities("lib/identicon.php?hash=$hash&size=$size");
    }
-   $customdata = parse_custom_json();
+
+   function avatar($name, $size='64') 
+   {
+      print('<img src="' . avatar_url($name, $size) . 
+      '" alt="' . $name . '" class="avatar"/>');
+   }
 ?>

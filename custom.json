@@ -2,8 +2,5 @@
     "svn": {
         "uri": "http://svn.inf.santiago.usm.cl",
         "comment": "Repos del depto."
-    },
-    "memory": {
-        "desmond": 8190
     }
 }

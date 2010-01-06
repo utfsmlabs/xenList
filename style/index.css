@@ -1,0 +1,100 @@
+/*
+* Copyright 2009 Javier Aravena Claramunt.
+*
+* This file is part of XenList.
+*
+* XenList is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* XenList is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with XenList.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* Page Header */
+div#page-head h1 {
+   font-size: 250%;
+   font-weight: bold;
+}
+p.subtitle {
+   font-style:italic;
+}
+div#page-head {
+   padding: 10px 0 5px 20px;
+   background: #383838;
+   color: #eee;
+   border-bottom: 3px solid #292929;
+}
+
+/* Page footer */
+div#footer {
+   border-top: thin solid #ddd;
+   color: #bbb;
+   font-style:italic;
+   padding: 5px;
+   text-align: center;
+}
+
+/* More info */
+dl.moreinfo {
+   display: none;
+   padding: 0 20px 0 20px; 
+   clear: both;
+}
+dl.moreinfo dd {
+   overflow: auto;
+}
+dl.moreinfo dt {
+   font-weight: bold;
+}
+
+/* Table */
+table#domU-table {
+   margin: 20px 0 20px 30px;
+}
+table#domU-table th{
+   text-align: left;
+   font-size: 170%;
+   font-weight: bold;
+}
+
+/* DomU */
+table#domU-table td{
+   vertical-align: top;
+   border: thin #ccc solid;
+   background: #f8f8f8;
+}
+
+table#domU-table td ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+table#domU-table td ul li{
+   width: 220px;
+   margin-bottom: 5px;
+   clear: both;
+}
+table#domU-table td ul li.domu div.domu-header {
+   padding: 2px 20px 3px 20px; 
+}
+div.domu-header h2{
+   font-size: 170%;
+   max-width: 110px;
+   overflow: hidden;
+}
+img.avatar {
+   float: right;
+   width: 64px;
+}
+a.showmoreinfo {
+   display: block;
+   padding: 0 20px 0 20px;
+}
