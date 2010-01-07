@@ -41,6 +41,24 @@ div#footer {
    text-align: center;
 }
 
+/* Links */
+a:link {
+   color: #204187;
+}
+a:visited {
+   color: #5c3566;
+}
+a.showmoreinfo {
+   text-decoration: none;
+}
+a.showmoreinfo:hover {
+   text-decoration: underline;
+   color: #204187;
+}
+a.showmoreinfo:visited {
+   color: #204187;
+}
+
 /* More info */
 dl.moreinfo {
    display: none;
@@ -93,6 +111,7 @@ div.domu-header h2{
 img.avatar {
    float: right;
    width: 64px;
+   border: thin solid #ccc;
 }
 a.showmoreinfo {
    display: block;

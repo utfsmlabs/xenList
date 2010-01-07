@@ -15,6 +15,8 @@
       <title>Xen List</title>
       <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.0r4/build/reset-fonts/reset-fonts.css"/>
       <link rel="stylesheet" type="text/css" href="style/index.css"/>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
    </head>
    <body>
       <div id="page-head">
