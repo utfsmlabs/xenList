@@ -1,6 +1,6 @@
 {
-    "svn": {
-        "uri": "http://svn.inf.santiago.usm.cl",
-        "comment": "Repos del depto."
+    "example": {
+        "uri": "http://www.example.com",
+        "comment": "The uri will be used as a link in the virtual machine's name in the list."
     }
 }
