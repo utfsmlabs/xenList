@@ -22,16 +22,21 @@
 
    include_once('config.php');
 
-   function retrieve_xen_data($servers) {
+   function retrieve_xen_data(&$servers) {
       $rawdata  = array();
       $domain = array();
-      foreach($servers as $server) {
+      foreach($servers as $key => $server) {
          $rawdata[$server] = "";
          $file = fopen("http://$server:8080/details.json", "r");
-         while(!feof($file))
-         $rawdata[$server] = $rawdata[$server] . fgets($file, 4096);
-         fclose($file);
-         $domain[$server] = json_decode($rawdata[$server], true);
+         if($file == 0) {
+             unset($servers[$key]);
+             unset($rawdata[$key]);
+         } else {
+             while(!feof($file))
+                 $rawdata[$server] = $rawdata[$server] . fgets($file, 4096);
+             fclose($file);
+             $domain[$server] = json_decode($rawdata[$server], true);
+         }
       }
       return $domain;
    }
